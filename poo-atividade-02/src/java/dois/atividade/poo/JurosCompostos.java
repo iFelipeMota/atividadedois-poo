@@ -100,7 +100,7 @@ public class JurosCompostos extends HttpServlet {
                 retorno += "<tr align='center'><td>"+i+"</td><td>"+NumberFormat.getCurrencyInstance().format(vrC)+"</td><td>"+NumberFormat.getCurrencyInstance().format(vrM-vrC)+"</td><td>"+NumberFormat.getCurrencyInstance().format(vrM)+"</td></tr>";
                 vrC = vrM;
             }
-            retorno += "</table";
+            retorno += "</table>";
             if(prC == 0){
                 retorno = "";
             }
