@@ -40,20 +40,51 @@ public class JurosSimples extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title> Cálculo Juros Simples</title>");            
+            out.println("<title> Cálculo Juros Simples</title>");
+            out.println("<style> #tab {border: 1px solid black; border-collapse: collapse}</style>");
+            out.println("<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'></script>");
+            out.println("<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>");
+            out.println("<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>");
             out.println("</head>");
-            out.println("<body>");
+            out.println("<body bgcolor='lightblue' font style=font-family:verdana>");
             out.println("<div class='col-md-12'>");
             out.println("<center><h3>Juros Simples</h3></center>");
             out.println("<hr/>");
             out.println("<form>");
-            out.println("Capital Aplicado: <input type='number' name='vrC'/>");
-            out.println("<br/>");
-            out.println("Taxa de Juros: <input type='number' step=',01' name='vrI'/>");
-            out.println("<br/>");
-            out.println("Tempo de Aplicação: <input type='number' name='vrN'/>");
-            out.println("<br/>");
-            out.println("<input type='submit' value='Calcular'/>");
+            out.println("<center>");
+            out.println("<table>");
+            out.println("<tr colspan='2'>");
+            out.println("<td>");            
+            out.println("Capital Aplicado: ");
+            out.println("</td>");
+            out.println("<td>");
+            out.println("<input type='number' name='vrC'/>");
+            out.println("</tr>");
+            out.println("</td>");             
+            out.println("<tr>");
+            out.println("<td>"); 
+            out.println("Taxa de Juros: ");
+            out.println("</td>");
+            out.println("<td>");
+            out.println("<input type='number' step=',01' name='vrI'/>");
+            out.println("</td>");
+            out.println("</tr>");
+            out.println("<tr>");
+            out.println("<td>"); 
+            out.println("Tempo de Aplicação:");
+            out.println("</td>");
+            out.println("<td>");
+            out.println("<input type='number' name='vrN'/>");
+            out.println("</td>");
+            out.println("</tr>");
+            out.println("<tr colspan='2'>");
+            out.println("<td>"); 
+            out.println("</td>");
+            out.println("<td>");
+            out.println("<input type='submit' class='btn btn-info' value='Calcular'/>");
+            out.println("</td>");             
+            out.println("</tr>");            
+            out.println("</table>");
             out.println("<hr/>");
             out.println("</form>");
            
@@ -89,7 +120,7 @@ public class JurosSimples extends HttpServlet {
         double varJuros=calcularJuros(prCap,prI,prN);
         double varM = prCap*(1+prI*prN);
                 if (isNumber(varJuros) && varJuros != 0){
-            retorno = "<p>Ao longo de " + prN + " meses à uma taxa de " + NumberFormat.getPercentInstance().format(prI) + ", o montante acumulado sobre o capital aplicado é " + NumberFormat.getCurrencyInstance().format(varM) + ", gerando um juros de " + NumberFormat.getCurrencyInstance().format(varJuros) + ".</p>";
+            retorno = "<p>Ao longo de " + prN + " meses à uma taxa de " + NumberFormat.getPercentInstance().format(prI) + ", o montante acumulado sobre o capital aplicado é " + NumberFormat.getCurrencyInstance().format(varM) + ",</br> gerando um juros de " + NumberFormat.getCurrencyInstance().format(varJuros) + ".</p>";
         }
         else{
             retorno = "";
@@ -99,7 +130,7 @@ public class JurosSimples extends HttpServlet {
      
      public String TabelaDeJuros(Double prCap, Double prI, Integer prN){
         String retorno;
-            retorno = "<table border='1'><tr><th>Mês</th><th>Montante Inicial</th><th>Juros</th><th>Montante Final</th></tr>";
+            retorno = "<table id='tab'><tr><th>Mês</th><th>Montante Inicial</th><th>Juros</th><th>Montante Final</th></tr>";
             double varCap = prCap;
             for(int i =1; i<=prN; i++){
                 double varM = calcularJuros(prCap, prI, i);

@@ -62,7 +62,7 @@ out.println("<html>");
                   out.println("<div class='row'>");
                          	out.println("<div class='col-sm-4 col-md-3'>");
                                   out.println("<div class='thumbnail' style='background: # CCC'>");
-                                      out.println("<img src='src/images/download.jpg' alt='...' class='img-circle' width='242' height='200'> "); 
+                                      out.println("<img src='https://avatars0.githubusercontent.com/u/36648465?s=460&v=4' alt='...' class='img-circle' width='242' height='200'> "); 
                                           out.println("<div class='caption'>");
                                             out.println("<h3 style='color: #006666' align='center'>Ivan Mota</h3>");
                                                   out.println("<p align='center'><b>Github: </b><a href='https://github.com/iFelipeMota' target='_blank'>@iFelipeMota</p></a>");
@@ -72,7 +72,7 @@ out.println("<html>");
                              
                          	out.println("<div class='col-sm-4 col-md-3'>");
                                   	out.println("<div class='thumbnail' style='background:  # CCC'>");
-                                      out.println("<img src='src/images/download (1).jpg' alt='...' class='img-circle' width='242' height='200'> ");           
+                                      out.println("<img src='https://avatars2.githubusercontent.com/u/36889842?s=460&v=4' alt='...' class='img-circle' width='242' height='200'> ");           
                                           out.println("<div class='caption'>");
                                             out.println("<h3 style='color: #006666' align='center'>Janaina Dias</h3>");
                                                    out.println("<p align='center'><b>Github: </b><a href='https://github.com/janainadias95' target='_blank'>@janainadias95</p></a>");
@@ -82,7 +82,7 @@ out.println("<html>");
                              
                           	out.println("<div class='col-sm-4 col-md-3'>");
                                   out.println("<div class='thumbnail' style='background:  # CCC'>");
-                                     out.println("<img src='src/images/download.jpg'  alt='...' class='img-circle' width='242' height='200'>");  
+                                     out.println("<img src='https://avatars1.githubusercontent.com/u/25270030?s=460&v=4'  alt='...' class='img-circle' width='242' height='200'>");  
                                           out.println("<div class='caption'>");
                                             out.println("<h3 style='color: #006666' align='center'>Joao Soler</h3>");
                                                   out.println("<p align='center'><b>Github: </b><a href='https://github.com/JoaoPauloSoler' target='_blank'>@JoaoPauloSoler</p></a>");
